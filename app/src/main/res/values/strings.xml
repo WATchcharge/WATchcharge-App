@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">WATchcharge</string>
+
+    <string name="polish_facts">
+        Czy wiesz, że utrzymywanie stanu naładowania Twojej baterii między 20% a 80% poprawia jej żywotność?\n
+        Pod żadnym pozorem nie ładuj telefonu w nocy, gdy śpisz. Niszczy to baterię oraz może spowodować pożar!\n
+        Nigdy nie wystawiaj telefonu na długie działanie promieni słonecznych - powoduje to degradację baterii!\n
+        Nie ładuj telefonu, gdy jest bardzo zimny, bądź gorący. Powoduje to drastyczny spadek żywotności jego ogniwa!\n
+        Staraj się nie dopuszczać do całkowitego rozładowania się urządzenia!\n
+        Nie korzystaj z podejrzanych ładowarek bądź przewodów do ładowania telefonu - ich przegrzanie może spowodować pożar!\n
+        Nie ładuj telefonu długo - stosuj krótkie, ale częste serie ładowania!\n
+        Nie ładuj telefonu do 100% - to tylko niszczy jego baterię!\n
+        Jeśli bateria Twojego telefonu się wyładuje, pod żadnym pozorem nie uruchamiaj go od razu po podłączeniu ładowarki. Odczekaj, aż trochę się naładuje.\n
+        Wyłącz dane komórkowe, lokalizację, Bluetooth, czy NFC, jeśli akurat ich nie używasz.\n
+        Staraj się nie doprowadzać telefonu do przegrzania - niszczy to jego baterię!\n
+        Nie martw się - możesz korzystać z telefonu podczas jego ładowania. Staraj się tylko, aby nie został przegrzany!\n
+        Nie musisz bać się ładowania indukcyjnego - nie jest groźne, jeśli stosujesz się do innych wspomnianych tutaj wskazówek!
+    </string>
+
+    <string name="polish_texts">
+        Technologia: \n
+        Napięcie: \n
+        Temperatura: \n
+        Zdrowie: \n
+        Nieznane\n
+        Dobre\n
+        Przegrzana\n
+        Nadmierne napięcie\n
+        Zamarza\n
+        80% lub więcej - zakończ ładowanie.\n
+        20% lub mniej - ładowanie zalecane.\n
+        Przypomnienie o ładowaniu
+    </string>
+
+    <string name="english_facts">
+        Did you know that keeping your battery charged between 20% and 80% improves its lifespan?\n
+        Under no circumstances should you charge your phone at night while you are asleep. It reduces battery life and may cause a fire!\n
+        Never ever expose the phone to long sunlight - it degrades the battery!\n
+        Don\'t charge your phone when it\'s very cold or hot. This causes a drastic decrease in the battery cell lifetime!\n
+        Try not to let the device discharge completely!\n
+        Do not use suspicious, non-branded chargers or cables to charge your phone - overheating may cause a fire!\n
+        Do not charge the phone for a long time - use short but frequent charging bursts!\n
+        Do not fully charge your phone - it destroys its battery!\n
+        If your phone\'s battery runs out of power, under no circumstances should you run it immediately after connecting the charger. Wait for it to charge a little bit.\n
+        Turn off mobile data, location, Bluetooth and NFC when you\'re not using them at the moment.\n
+        Try not to overheat the phone - it will ruin its battery!\n
+        Don\'t worry - you can use your phone while it\'s charging. Just try not to overheat it!\n
+        You don\'t need to be afraid of wireless charging - it\'s not dangerous if you follow the other tips mentioned in this app!
+    </string>
+
+    <string name="english_texts">
+        Technology: \n
+        Voltage: \n
+        Temperature: \n
+        Health: \n
+        Unknown\n
+        Good\n
+        Overheated\n
+        Excessive voltage\n
+        Freezing\n
+        80% or more - stop charging.\n
+        20% or less - charging recommended.\n
+        Charging reminder
+    </string>
+
+    <string name="ukrainian_facts">
+        Ви знали, що утримування степені заряду на рівні між 20% та 80% покращує її тривалість?\n
+        Ні в якому разі не заряджайте телефон вночі, коли ви спите. Це знищує акумулятор і може призвести до пожежі!\n
+        Ніколи не піддавайте телефон тривалому впливу сонячних променів – це погіршує роботу акумулятора!\n
+        Не заряджайте телефон, коли він дуже холодний або гарячий. Це спричиняє різке погіршення її тривалості!\n
+        Старайся не допускати до цілковитого розрядження телефону!\n
+        Не використовуйте для зарядки телефону підозрілі або підробнi зарядні пристрої – їх перегрів може призвести до пожежі!\n
+        Не заряджайте телефон довго - використовуйте короткі, але часті серії зарядок.\n
+        Не заряджайте телефон повністю – це руйнує його акумулятор!\n
+        Якщо акумулятор вашого телефону розрядився, ні в якому разі не запускайте його відразу після підключення зарядного пристрою. Зачекайте, поки він трохи зарядиться.\n
+        Вимкніть мобільні дані, місцезнаходження, Bluetooth і NFC, коли ви не використовуєте їх на даний момент.\n
+        Намагайтеся не перегрівати телефон - це зіпсує його акумулятор!\n
+        Не хвилюйтеся – ви можете користуватися телефоном, поки він заряджається. Тільки намагайтеся не перегріти його!\n
+        Вам не потрібно боятися бездротової зарядки - це не небезпечно, якщо ви будете дотримуватися інших порад, згаданих у цьому додатку!
+    </string>
+
+    <string name="ukrainian_texts">
+        Технологія: \n
+        Напруга: \n
+        Температура: \n
+        Здоров\'я: \n
+        Невідомо\n
+        добре\n
+        Перегрітий\n
+        Надмірна напруга\n
+        Замерзає\n
+        80% або більше - закінчити зарядку.\n
+        20% або менше - рекомендована зарядка.\n
+        Нагадування про зарядку
+    </string>
+</resources>
