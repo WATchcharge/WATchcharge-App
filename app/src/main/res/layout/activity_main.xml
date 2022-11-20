@@ -35,7 +35,7 @@
             android:orientation="horizontal"
             android:gravity="center"
             android:layout_gravity="center"
-            android:layout_marginLeft="40sp">
+            android:layout_marginStart="40sp">
 
             <ImageView
                 android:id="@+id/moon"
@@ -50,7 +50,7 @@
                 android:layout_height="30dp"
                 android:visibility="visible"
                 app:srcCompat="@drawable/sun"
-                android:layout_marginLeft="-30dp"/>
+                android:layout_marginStart="-30dp"/>
         </LinearLayout>
 
         <Switch
@@ -93,7 +93,7 @@
                 android:layout_height="300sp"
                 app:srcCompat="@drawable/battery_progress_bar"
                 tools:visibility="visible"
-                android:layout_marginLeft="-110sp"/>
+                android:layout_marginStart="-110sp"/>
 
         </LinearLayout>
 
@@ -110,7 +110,7 @@
                 android:layout_height="100sp"
                 android:gravity="center"
                 android:textColor="#00A651"
-                android:textSize="40dp"
+                android:textSize="40sp"
                 tools:text="90%"
                 tools:visibility="visible" />
 
@@ -128,46 +128,40 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="300sp"
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_gravity="center">
 
         <TextView
             android:id="@+id/info2"
-            android:layout_width="220sp"
-            android:layout_height="200sp"
+            android:layout_width="280sp"
+            android:layout_height="140sp"
             android:fontFamily="@font/roboto"
             android:gravity="center"
             android:text="Jeśli bateria Twojego telefonu się wyładuje, pod żadnym pozorem nie uruchamiaj go od razu po podłączeniu ładowarki. Odczekaj, aż trochę się naładuje."
             android:textColor="#FFFFFF"
-            android:padding="10sp"/>
+            android:padding="10sp" />
 
         <ImageView
+            android:layout_gravity="center"
             android:id="@+id/imageView2"
-            android:layout_width="250sp"
-            android:layout_marginStart="-220sp"
+            android:layout_width="290sp"
+            android:layout_marginStart="-285sp"
             android:layout_height="250sp"
             app:srcCompat="@drawable/facts_frame" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_gravity="center">
+    <VideoView
+        android:id="@+id/leafAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        android:layout_gravity="center"
 
-        <VideoView
-            android:id="@+id/leafAnimation"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#00000000"
-
-            android:backgroundTintMode="src_over"
-            android:visibility="visible"
-            tools:visibility="visible" />
-    </LinearLayout>
+        android:backgroundTintMode="src_over"
+        android:visibility="visible"
+        tools:visibility="visible" />
 
 </LinearLayout>
