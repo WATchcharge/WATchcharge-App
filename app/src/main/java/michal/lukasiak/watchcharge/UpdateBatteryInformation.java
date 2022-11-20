@@ -19,20 +19,14 @@ import com.john.waveview.WaveView;
 import watchcharge.R;
 
 public class UpdateBatteryInformation extends BroadcastReceiver {
-    private TextView textComponent;
-    private WaveView progressBar;
-    private VideoView leaf;
-    private TextView textPercentage;
-
-    private String result = "";
-
-    private final String CHANNEL_ID = "WATchcharge";
-
-    private String notificationText;
+    private final TextView textComponent;
+    private final WaveView progressBar;
+    private final VideoView leaf;
+    private final TextView textPercentage;
 
     private boolean batteryNotification = true;
 
-    private String[] texts;
+    private final String[] texts;
 
     public UpdateBatteryInformation(TextView textComponent, WaveView progressBar, VideoView leaf, TextView textPercentage, String[] texts) {
         this.textComponent = textComponent;
@@ -63,7 +57,7 @@ public class UpdateBatteryInformation extends BroadcastReceiver {
 
         //set basic info about the battery
         String batteryTechnology = intent.getStringExtra(BatteryManager.EXTRA_TECHNOLOGY);
-        result = texts[0] + batteryTechnology + "\n";
+        String result = texts[0] + batteryTechnology + "\n";
 
         int batteryVoltage = intent.getIntExtra(BatteryManager.EXTRA_VOLTAGE, -1);
         result += texts[1] + batteryVoltage + " mV\n";
@@ -102,6 +96,7 @@ public class UpdateBatteryInformation extends BroadcastReceiver {
         if(batteryNotification && (batteryChargeStatus <= 20 || batteryChargeStatus >= 80 && isCharging)) {
             batteryNotification = false;
 
+            String notificationText;
             if(batteryChargeStatus >= 50) {
                 notificationText = texts[9];
             } else {
@@ -110,6 +105,7 @@ public class UpdateBatteryInformation extends BroadcastReceiver {
 
             Intent tmp = new Intent(context, MainActivity.class);
             PendingIntent contentIntent = PendingIntent.getActivity(context, 0, tmp, PendingIntent.FLAG_UPDATE_CURRENT);
+            String CHANNEL_ID = "WATchcharge";
             NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID,"WATchchannel",NotificationManager.IMPORTANCE_DEFAULT);
 
             NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)

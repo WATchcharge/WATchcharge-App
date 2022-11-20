@@ -28,23 +28,16 @@ import java.util.List;
 import watchcharge.R;
 
 public class MainActivity extends AppCompatActivity {
-    private IntentFilter intentFilter;
-    private Intent batteryStatusReceiver;
-
     private VideoView leaf;
 
     private int infoPosition = 0;
 
-    private Handler handler = new Handler();
+    private final Handler handler = new Handler();
 
     private TextView info1;
     private TextView info2;
 
-    private Switch modeSwitch;
-
     private View view;
-
-    private String lastMode = "lastAppPreferences";
 
     private ImageView sun;
     private ImageView moon;
@@ -52,12 +45,9 @@ public class MainActivity extends AppCompatActivity {
     private WaveView batteryProgressBar;
 
     private String[] facts;
-    private String[] texts;
 
     private Uri darkURI;
     private Uri lightUri;
-
-    private Spinner languageSwitch;
 
     private boolean restartAppReminder = false;
 
@@ -66,17 +56,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        languageSwitch = findViewById(R.id.languageChoice);
+        Spinner languageSwitch = findViewById(R.id.languageChoice);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_item, new String[]{"Polski", "English", "Українська"});
 
         languageSwitch.setAdapter(adapter);
 
+        String lastMode = "lastAppPreferences";
         SharedPreferences settings = getApplicationContext().getSharedPreferences(lastMode, 0);
 
         int language = settings.getInt("chosenLanguage", 0);
         languageSwitch.setSelection(language);
 
-        texts = this.getString(R.string.polish_texts).split("\\n", -1);
+        String[] texts = this.getString(R.string.polish_texts).split("\\n", -1);
         List<String> factsAsList = Arrays.asList(this.getString(R.string.polish_facts).split("\\n", -1));
 
         switch (language) {
@@ -137,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
         changeVisibility(darkMode);
 
         //assign mode switch button and previous value
-        modeSwitch = findViewById(R.id.modeSwitch);
+        Switch modeSwitch = findViewById(R.id.modeSwitch);
         modeSwitch.setChecked(darkMode);
 
         //add functionality to mode switch button
@@ -149,8 +140,8 @@ public class MainActivity extends AppCompatActivity {
 
         //set broadcast receiver for getting information associated with battery
         UpdateBatteryInformation infoUpdater = new UpdateBatteryInformation(info1, batteryProgressBar, leaf, findViewById(R.id.batteryPercentage), texts);
-        intentFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-        batteryStatusReceiver = this.registerReceiver(infoUpdater, intentFilter);
+        IntentFilter intentFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+        Intent batteryStatusReceiver = this.registerReceiver(infoUpdater, intentFilter);
         infoUpdater.onReceive(this, batteryStatusReceiver);
 
         //select element for interesting facts
